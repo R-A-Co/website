@@ -1,0 +1,27 @@
+{
+  "name": "Data Science Club",
+  "committee": "Research & Analysis Committee",
+  "shortName": "R&A",
+  "email": "research@datascienceclub.org",
+  "github": "https://github.com/dsc-research",
+  "linkedin": "https://www.linkedin.com/company/data-science-club/",
+  "institution": "University Data Science Club",
+  "location": "Science Building, Room 4.12",
+  "established": "2023",
+  "description": "A student-led committee beginning with an academic paper and a practical learning program for coding, data, and research.",
+  "focusAreas": [
+    "Academic writing",
+    "Coding foundations",
+    "Data analysis",
+    "Research skills",
+    "Peer learning",
+    "Student projects"
+  ],
+  "researchStats": [
+    { "label": "Established", "value": "2023" },
+    { "label": "Paper in progress", "value": "01" },
+    { "label": "Learning program", "value": "01" },
+    { "label": "Open projects", "value": "00" },
+    { "label": "Stage", "value": "Starting" }
+  ]
+}

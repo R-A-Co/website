@@ -1,0 +1,86 @@
+[
+  {
+    "status": "Upcoming",
+    "date": "2026-11-12",
+    "day": "Thu",
+    "title": "Probabilistic forecasting at scale",
+    "description": "A hands-on workshop on quantile forecasts, rolling backtests, and conformal calibration with tscast. Bring a laptop; Python 3.12 recommended.",
+    "type": "Workshop",
+    "speaker": "Dr. Amara Okafor",
+    "location": "Science Building · Room 4.12",
+    "time": "18:00 – 19:30",
+    "href": "mailto:research@datascienceclub.org?subject=RSVP%20—%20Probabilistic%20forecasting%20at%20scale"
+  },
+  {
+    "status": "Upcoming",
+    "date": "2026-11-26",
+    "day": "Thu",
+    "title": "Causal inference for messy observational data",
+    "description": "Prof. Vasquez walks through target trial emulation, negative controls, and what to do when the parallel trends assumption fails.",
+    "type": "Guest lecture",
+    "speaker": "Prof. Elena Vasquez",
+    "location": "Auditorium B",
+    "time": "17:30 – 19:00",
+    "href": "mailto:research@datascienceclub.org?subject=RSVP%20—%20Causal%20inference%20guest%20lecture"
+  },
+  {
+    "status": "Upcoming",
+    "date": "2026-12-03",
+    "day": "Thu",
+    "title": "Reproducibility clinic: fix your experiment",
+    "description": "Bring a repository that will not reproduce. We will triage seeds, environments, data versions, and silent pipeline failures together.",
+    "type": "Collaborative session",
+    "speaker": "R&A Committee",
+    "location": "Lab 2.08",
+    "time": "16:00 – 18:00",
+    "href": "mailto:research@datascienceclub.org?subject=Reproducibility%20clinic"
+  },
+  {
+    "status": "Past",
+    "date": "2026-10-22",
+    "day": "Thu",
+    "title": "From notebook to package: shipping research code",
+    "description": "Packaging, typing, tests, and the minimum viable release. A practical walkthrough of extracting tscast from a research repository.",
+    "type": "Workshop",
+    "speaker": "Maya Chen",
+    "location": "Science Building · Room 4.12",
+    "time": "18:00 – 19:30",
+    "href": "https://github.com/dsc-research/seminars"
+  },
+  {
+    "status": "Past",
+    "date": "2026-10-08",
+    "day": "Thu",
+    "title": "Simulation models for clinic operations",
+    "description": "A guest lecture on discrete-event simulation, validation, and the gap between a clean model and a useful operational decision.",
+    "type": "Guest lecture",
+    "speaker": "Dr. Kwame Mensah",
+    "location": "Auditorium B",
+    "time": "17:30 – 19:00",
+    "href": "https://github.com/dsc-research/seminars"
+  },
+  {
+    "status": "Past",
+    "date": "2026-09-24",
+    "day": "Thu",
+    "title": "Reading group: conformal prediction",
+    "description": "A guided reading of split conformal methods, exchangeability, and the practical failure modes we see in deployed forecast systems.",
+    "type": "Collaborative session",
+    "speaker": "Daniel Osei",
+    "location": "Lab 2.08",
+    "time": "16:00 – 17:30",
+    "href": "https://github.com/dsc-research/seminars"
+  },
+  {
+    "status": "Past",
+    "date": "2026-09-10",
+    "day": "Thu",
+    "title": "Fall research kickoff + open problems",
+    "description": "The committee presented six open problems for the semester and formed the project pods that became GridCast, CarePath, and CausalTwin.",
+    "type": "Collaborative session",
+    "speaker": "R&A Committee",
+    "location": "Science Building · Room 4.12",
+    "time": "17:00 – 19:00",
+    "href": "https://github.com/dsc-research/seminars"
+  }
+]

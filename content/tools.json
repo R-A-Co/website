@@ -1,0 +1,34 @@
+[
+  {
+    "name": "tscast",
+    "version": "v0.9.4",
+    "description": "Probabilistic forecasting primitives: quantile losses, conformal intervals, rolling backtests, and calibration diagnostics.",
+    "command": "pip install tscast",
+    "tags": ["Python", "Forecasting", "MIT"],
+    "href": "https://github.com/dsc-research/tscast"
+  },
+  {
+    "name": "causalkit",
+    "version": "v0.6.1",
+    "description": "Doubly robust estimators, sensitivity bounds, and study diagnostics with a familiar scikit-learn API.",
+    "command": "pip install causalkit",
+    "tags": ["Python", "Causal inference", "MIT"],
+    "href": "https://github.com/dsc-research/causalkit"
+  },
+  {
+    "name": "clinicflow",
+    "version": "v0.4.0",
+    "description": "Composable discrete-event simulation blocks for clinics, labs, and referral networks. Fast enough for policy sweeps.",
+    "command": "pip install clinicflow",
+    "tags": ["Python", "Simulation", "Apache-2.0"],
+    "href": "https://github.com/dsc-research/clinicflow"
+  },
+  {
+    "name": "reprolab",
+    "version": "v0.3.2",
+    "description": "One-command experiment manifests, seed control, and artifact tracking for repositories that need to reproduce.",
+    "command": "pip install reprolab",
+    "tags": ["Python", "Research ops", "MIT"],
+    "href": "https://github.com/dsc-research/reprolab"
+  }
+]

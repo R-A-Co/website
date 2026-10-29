@@ -1,0 +1,26 @@
+[
+  {
+    "number": "01",
+    "title": "Start with the basics",
+    "description": "Set up Python, learn how notebooks work, understand files and folders, and get comfortable asking for help.",
+    "outcome": "You can run a notebook and explain what each step does."
+  },
+  {
+    "number": "02",
+    "title": "Work with data",
+    "description": "Practice loading, cleaning, filtering, and describing a small dataset with Python and pandas.",
+    "outcome": "You can turn a raw table into a clear first observation."
+  },
+  {
+    "number": "03",
+    "title": "Learn the research habit",
+    "description": "Read an accessible paper, identify its question and evidence, and keep notes that someone else can follow.",
+    "outcome": "You can summarize a study without losing its important limitations."
+  },
+  {
+    "number": "04",
+    "title": "Build a small project",
+    "description": "Choose a question, find or collect appropriate data, make a simple analysis, and share what you learned.",
+    "outcome": "You have a small, explainable project to discuss with the committee."
+  }
+]

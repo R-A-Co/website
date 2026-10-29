@@ -1,0 +1,56 @@
+[
+  {
+    "date": "2026-09-18",
+    "title": "Conformal calibration for long-horizon load forecasting",
+    "authors": "A. Okafor, M. Chen, R. Iyer",
+    "venue": "NeurIPS 2026",
+    "type": "Peer-reviewed",
+    "reference": "arXiv:2609.04217",
+    "href": "https://arxiv.org/abs/2609.04217"
+  },
+  {
+    "date": "2026-08-02",
+    "title": "Queue-aware routing in outpatient referral networks",
+    "authors": "S. Rahman, J. Park, L. Moreau",
+    "venue": "ACM CHIL 2026",
+    "type": "Peer-reviewed",
+    "reference": "arXiv:2608.01104",
+    "href": "https://arxiv.org/abs/2608.01104"
+  },
+  {
+    "date": "2026-06-11",
+    "title": "Sensitivity bounds for doubly robust estimators under unmeasured confounding",
+    "authors": "M. Chen, D. Osei",
+    "venue": "Working paper",
+    "type": "Preprint",
+    "reference": "arXiv:2606.04112",
+    "href": "https://arxiv.org/abs/2606.04112"
+  },
+  {
+    "date": "2026-04-27",
+    "title": "A reproducible benchmark for campus energy forecasting",
+    "authors": "A. Okafor, T. Nakamura",
+    "venue": "Technical report",
+    "type": "Technical note",
+    "reference": "R&A-TN-2026-03",
+    "href": "https://github.com/dsc-research/technical-notes"
+  },
+  {
+    "date": "2026-02-09",
+    "title": "Interpretable triage models under distribution shift",
+    "authors": "R. Iyer, S. Rahman, P. Adeyemi",
+    "venue": "Journal of Biomedical Informatics",
+    "type": "Peer-reviewed",
+    "reference": "doi:10.1016/j.jbi.2026.104512",
+    "href": "https://doi.org/10.1016/j.jbi.2026.104512"
+  },
+  {
+    "date": "2025-11-15",
+    "title": "Research pods: a model for undergraduate-led applied work",
+    "authors": "R&A Committee",
+    "venue": "Technical report",
+    "type": "Technical note",
+    "reference": "R&A-TN-2025-07",
+    "href": "https://github.com/dsc-research/technical-notes"
+  }
+]

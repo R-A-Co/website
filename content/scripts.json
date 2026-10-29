@@ -1,0 +1,18 @@
+[
+  {
+    "name": "energy-eda",
+    "href": "https://github.com/dsc-research/scripts/tree/main/energy-eda"
+  },
+  {
+    "name": "forecast-backtests",
+    "href": "https://github.com/dsc-research/scripts/tree/main/forecast-backtests"
+  },
+  {
+    "name": "clinic-sim",
+    "href": "https://github.com/dsc-research/scripts/tree/main/clinic-sim"
+  },
+  {
+    "name": "conformal-diagnostics",
+    "href": "https://github.com/dsc-research/scripts/tree/main/conformal-diagnostics"
+  }
+]

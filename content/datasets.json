@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Campus Energy Corpus",
+    "description": "Four years of 15-minute interval load, weather, and occupancy readings from twelve campus buildings.",
+    "format": "CSV · Parquet",
+    "size": "1.4 GB",
+    "license": "CC BY 4.0",
+    "updated": "Sep 2026",
+    "access": "Open",
+    "href": "https://github.com/dsc-research/campus-energy-corpus"
+  },
+  {
+    "name": "CarePath Queue Traces",
+    "description": "Anonymized arrival, service, and referral traces from outpatient clinics across two health networks.",
+    "format": "Parquet",
+    "size": "320 MB",
+    "license": "DUA required",
+    "updated": "Aug 2026",
+    "access": "On request",
+    "href": "https://github.com/dsc-research/carepath-data"
+  },
+  {
+    "name": "Student Wellbeing Panel",
+    "description": "Longitudinal survey of study habits, sleep, and wellbeing across four semesters (n = 2,140).",
+    "format": "CSV",
+    "size": "12 MB",
+    "license": "CC BY-NC 4.0",
+    "updated": "May 2026",
+    "access": "Open",
+    "href": "https://github.com/dsc-research/wellbeing-panel"
+  },
+  {
+    "name": "Seminar Transcript Corpus",
+    "description": "Diarized transcripts and slide text from sixty committee seminars, cleaned for retrieval experiments.",
+    "format": "JSONL",
+    "size": "210 MB",
+    "license": "CC BY 4.0",
+    "updated": "Oct 2026",
+    "access": "Open",
+    "href": "https://github.com/dsc-research/seminar-corpus"
+  }
+]

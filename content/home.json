@@ -1,0 +1,24 @@
+{
+  "heroTitle": "A student space for learning research, coding, and data science together.",
+  "heroIntro": "We are a new committee of the",
+  "heroSecondary": "No advanced experience is required. We will learn through guided resources, small activities, and honest conversations about what it takes to begin research.",
+  "aboutTitle": "A place to start learning together.",
+  "aboutIntro": "We are building a welcoming space where students can learn how research works, practice coding, and ask better questions.",
+  "aboutSecondary": "We are at the beginning. Our first academic paper and learning program will grow through student participation, faculty guidance, and steady practical work.",
+  "activitiesTitle": "Small activities, a place to begin.",
+  "activitiesIntro": "We are starting simply: learn together, discuss useful ideas, and build the habits that make future research possible.",
+  "activities": [
+    {
+      "label": "Paper reading",
+      "value": "Read research papers together, pause over unfamiliar ideas, and discuss what makes a study convincing."
+    },
+    {
+      "label": "Coding sessions",
+      "value": "Practice the tools needed to explore data and turn questions into small experiments."
+    },
+    {
+      "label": "Research discussions",
+      "value": "Share questions, methods, and sources as we develop our first academic paper."
+    }
+  ]
+}

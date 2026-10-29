@@ -1,0 +1,50 @@
+[
+  {
+    "code": "PRJ-001",
+    "name": "GridCast",
+    "status": "Active",
+    "period": "2026 — present",
+    "title": "Probabilistic load forecasting for campus-scale energy systems.",
+    "abstract": "A 96-hour forecasting system for university microgrids. A temporal-convolutional backbone produces quantile forecasts, recalibrated with conformal prediction and validated against four years of interval data — then served through a lightweight inference API.",
+    "tags": ["Time-series", "Probabilistic ML", "Energy systems"],
+    "metrics": [
+      { "label": "Horizon", "value": "96 h" },
+      { "label": "Coverage", "value": "94.2%" },
+      { "label": "MAPE", "value": "7.8%" }
+    ],
+    "repo": "https://github.com/dsc-research/gridcast",
+    "featured": true
+  },
+  {
+    "code": "PRJ-002",
+    "name": "CarePath",
+    "status": "Active",
+    "period": "2025 — present",
+    "title": "Simulation and optimization for outpatient care logistics.",
+    "abstract": "A discrete-event model of referral routing, appointment capacity, and no-show behaviour across partner clinics — paired with a mixed-integer scheduler. Pilot scenarios reduced modelled median wait time by 18%.",
+    "tags": ["Health systems", "Operations research", "Simulation"],
+    "metrics": [
+      { "label": "Wait reduction", "value": "18%" },
+      { "label": "Scenarios", "value": "1,200" },
+      { "label": "Sites", "value": "04" }
+    ],
+    "repo": "https://github.com/dsc-research/carepath",
+    "featured": false
+  },
+  {
+    "code": "PRJ-003",
+    "name": "CausalTwin",
+    "status": "Active",
+    "period": "2025 — present",
+    "title": "A reproducible engine for observational policy evaluation.",
+    "abstract": "Doubly robust estimators, negative controls, and sensitivity bounds behind one scikit-learn-compatible interface — built for studies that must survive scrutiny, not just a single notebook.",
+    "tags": ["Causal inference", "Econometrics", "Open science"],
+    "metrics": [
+      { "label": "Estimators", "value": "12" },
+      { "label": "Validation", "value": "Synthetic" },
+      { "label": "License", "value": "MIT" }
+    ],
+    "repo": "https://github.com/dsc-research/causaltwin",
+    "featured": false
+  }
+]

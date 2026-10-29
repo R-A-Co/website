@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Dr. Amara Okafor",
+    "initials": "AO",
+    "role": "Chair & Faculty Advisor",
+    "focus": "Probabilistic forecasting · Energy systems",
+    "email": "mailto:amara.okafor@datascienceclub.org",
+    "github": "https://github.com/dsc-research"
+  },
+  {
+    "name": "Maya Chen",
+    "initials": "MC",
+    "role": "Research Lead — Causal Inference",
+    "focus": "Doubly robust estimation · Sensitivity analysis",
+    "email": "mailto:maya.chen@datascienceclub.org",
+    "github": "https://github.com/dsc-research"
+  },
+  {
+    "name": "Rohan Iyer",
+    "initials": "RI",
+    "role": "Research Lead — Health Systems",
+    "focus": "Triage modelling · Algorithmic fairness",
+    "email": "mailto:rohan.iyer@datascienceclub.org",
+    "github": "https://github.com/dsc-research"
+  },
+  {
+    "name": "Sofia Rahman",
+    "initials": "SR",
+    "role": "Research Engineer",
+    "focus": "Operations research · Simulation",
+    "email": "mailto:sofia.rahman@datascienceclub.org",
+    "github": "https://github.com/dsc-research"
+  },
+  {
+    "name": "Daniel Osei",
+    "initials": "DO",
+    "role": "Doctoral Researcher",
+    "focus": "Conformal prediction · Distribution shift",
+    "email": "mailto:daniel.osei@datascienceclub.org",
+    "github": "https://github.com/dsc-research"
+  },
+  {
+    "name": "Jae Park",
+    "initials": "JP",
+    "role": "Data Engineer",
+    "focus": "Pipelines · Reproducible infrastructure",
+    "email": "mailto:jae.park@datascienceclub.org",
+    "github": "https://github.com/dsc-research"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Kaggle Learn",
+    "description": "Short, practical lessons for Python, pandas, data visualization, and machine learning.",
+    "category": "Start here",
+    "href": "https://www.kaggle.com/learn"
+  },
+  {
+    "title": "Python tutorial",
+    "description": "The official introduction to Python syntax, data structures, functions, and modules.",
+    "category": "Python",
+    "href": "https://docs.python.org/3/tutorial/"
+  },
+  {
+    "title": "NumPy quickstart",
+    "description": "A concise guide to arrays, indexing, shapes, and numerical operations.",
+    "category": "Python",
+    "href": "https://numpy.org/doc/stable/user/quickstart.html"
+  },
+  {
+    "title": "pandas getting started",
+    "description": "Learn how to read, clean, select, summarize, and combine tabular data.",
+    "category": "Data",
+    "href": "https://pandas.pydata.org/docs/getting_started/intro_tutorials/"
+  },
+  {
+    "title": "Matplotlib tutorials",
+    "description": "Build clear plots and learn the basic choices that make charts easier to understand.",
+    "category": "Data",
+    "href": "https://matplotlib.org/stable/tutorials/index.html"
+  },
+  {
+    "title": "An Introduction to Statistical Learning",
+    "description": "A gentle introduction to statistical learning with free books and companion materials.",
+    "category": "Research",
+    "href": "https://www.statlearning.com/"
+  },
+  {
+    "title": "The Turing Way",
+    "description": "An open handbook for reproducible, ethical, and collaborative data science.",
+    "category": "Research",
+    "href": "https://the-turing-way.netlify.app/"
+  },
+  {
+    "title": "GitHub Skills",
+    "description": "Interactive exercises for learning repositories, branches, issues, and collaboration.",
+    "category": "Collaboration",
+    "href": "https://skills.github.com/"
+  }
+]
