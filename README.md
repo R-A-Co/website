@@ -1,175 +1,128 @@
-# Research & Analysis — Data Science Club
+# Research & Analysis Committee
 
-A light, editorial research site for the Data Science Club's Research & Analysis Committee, built to echo the current Cognition design language: a quiet canvas, serif running text, compact sans headings, a left rail, and a single blue accent.
+The public website for the Research & Analysis Committee of the Data Science Club at the School of Mathematical Sciences, Tribhuvan University.
 
-The site is a multi-page Next.js App Router project with a schema-driven custom admin for editing every collection. Content lives as JSON in [`content/`](./content) so edits are versioned with the code.
+The committee is starting with an academic paper, a student learning program, practical resources, and a space for students to learn research and data science together.
 
-## Stack
+**Live parent club:** [dscsms.com](https://dscsms.com)  
+**Repository:** [R-A-Co/website](https://github.com/R-A-Co/website)
 
-- **Next.js 16** (App Router, Turbopack)
-- **React 19**
-- **Tailwind CSS v4**
-- **Geist Sans / Geist Mono** via `geist` for headings and micro-labels
-- **Newsreader Variable** via `@fontsource-variable/newsreader` for running text
-- **Lucide React** icons
+## What is on the website
+
+- **Homepage** — committee overview, current activities, focus areas, and links to every section
+- **Learning** — a four-stage roadmap from Python basics to a small research project
+- **Research** — current research projects and their progress
+- **Resources** — curated links for Python, data analysis, statistics, research, and collaboration
+- **Our work** — the academic paper in progress, future student projects, and publications
+- **Events** — workshops, talks, and collaborative sessions
+- **People & contact** — committee members, contact details, GitHub, and the contact form
+
+Content is stored as versioned JSON in [`content/`](./content). The password-protected CMS at `/admin` edits the content used by the current public pages.
+
+## Technology
+
+- Next.js 16 App Router
+- React 19
 - TypeScript
+- Tailwind CSS v4
+- Geist Sans and Geist Mono
+- Newsreader Variable
+- Lucide React
 
-All fonts are self-hosted; the site makes no font network requests.
+The site uses a responsive editorial layout with a desktop sidebar, mobile navigation, accessible focus states, reduced-motion support, and no external font requests.
 
-## Getting started
+## Run locally
+
+Requirements: Node.js and npm.
 
 ```bash
+git clone https://github.com/R-A-Co/website.git
+cd website
 npm install
-cp .env.example .env.local   # optional locally
+cp .env.example .env.local
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
+Useful commands:
+
 ```bash
-npm run typecheck   # TypeScript
-npm run build       # production build
-npm run start       # serve the production build
+npm run typecheck
+npm run build
+npm run start
 ```
 
-## Routes
+## CMS
 
-| Route        | Index | Contents                                                        |
-| ------------ | ----- | --------------------------------------------------------------- |
-| `/`          | 01    | Overview: hero, focus areas, and teasers for 02–06              |
-| `/research`  | 02    | Full project list with featured project, metrics, and repo links |
-| `/tools`     | 03    | Packages, curated datasets, and analytical scripts              |
-| `/papers`    | 04    | Peer-reviewed articles, preprints, and technical notes          |
-| `/seminars`  | 05    | Upcoming sessions and the past archive                          |
-| `/team`      | 06    | Committee roster and open call                                  |
-| `/admin`     | —     | Password-protected content editor                               |
+Open [http://localhost:3000/admin](http://localhost:3000/admin) and sign in with `ADMIN_PASSWORD`.
 
-`/sitemap.xml` and `/robots.txt` are generated from `NEXT_PUBLIC_SITE_URL`; `/admin` is excluded from indexing.
+The current CMS collections are:
 
-## Structure
+| Collection | Used for |
+| --- | --- |
+| Homepage | Hero, About, and Activities content |
+| Site settings | Club identity, contact details, links, focus areas, and stats |
+| Committee | People & contact page |
+| Learning roadmap | Learning page stages and outcomes |
+| Resources | Resource links shown on the Resources page |
+| Research projects | Projects shown on the Research page |
+| Papers | Publications shown on Our work |
+| Seminars | Events shown on the Events page |
 
-```
-app/
-  layout.tsx              Fonts, metadata, JSON-LD, skip link
-  (site)/
-    layout.tsx            Left rail, header, footer, main landmark
-    page.tsx              Overview home
-    research/page.tsx     Section 02
-    tools/page.tsx        Section 03
-    papers/page.tsx       Section 04
-    seminars/page.tsx     Section 05
-    team/page.tsx         Section 06
-  admin/
-    layout.tsx            Admin chrome, storage indicator, sign out
-    page.tsx              Collection dashboard
-    login/page.tsx        Password sign-in
-    [collection]/page.tsx Generic collection editor
-  globals.css             Light design tokens, link styles, motion
-  opengraph-image.tsx     Generated light social card
-  sitemap.ts / robots.ts  Crawler metadata
-  not-found.tsx           404
-content/                  Editable JSON (the CMS data layer)
-components/
-  site-header.tsx         Sticky desktop rail, mobile focus-trapped dialog
-  page-shell.tsx          Numbered page intro + content grid
-  section.tsx             Numbered editorial section primitive
-  hero.tsx                Section 01, research focus band
-  projects.tsx            Featured project + forecast figure + project cards
-  tools.tsx               Packages, datasets, scripts
-  papers.tsx              Publication log
-  seminars.tsx            Upcoming + past sessions
-  team.tsx                Committee + open call
-  site-footer.tsx         Contact, institutional links, colophon
-  admin/                  Collection editor and login form
-lib/
-  content.ts              Server-side JSON readers and sorting
-  content-types.ts        Shared content types
-  nav.ts                  Route table with 02–06 indices
-  admin/schema.ts         Collections and field definitions
-  admin/actions.ts        Login, logout, and save server actions
-  admin/auth.ts           HMAC cookie sessions and password checks
-  admin/store.ts          Local or GitHub-backed content writes
-  admin/normalize.ts      Field coercion and validation
-  utils.ts                cn(), container, buttons, date formatting
-```
-
-## Editing content
-
-Every collection is a JSON file in [`content/`](./content):
-
-| File            | Admin section    | Notes                                                  |
-| --------------- | ---------------- | ------------------------------------------------------ |
-| `site.json`     | Site settings    | Identity, contact, focus areas, headline stats         |
-| `projects.json` | Research projects | Set `featured` on the project shown first and on home  |
-| `tools.json`    | Tools            | Name, version, description, install command            |
-| `datasets.json` | Datasets         | Format, size, license, access                          |
-| `scripts.json`  | Scripts          | Name and URL                                           |
-| `papers.json`   | Papers           | Sorted newest first by date                            |
-| `seminars.json` | Seminars         | `Upcoming` appears first; `Past` moves to the archive  |
-| `members.json`  | Committee        | Name, initials, role, focus, contact links             |
-
-You can edit the JSON directly or use the admin at `/admin`. Field definitions live in [`lib/admin/schema.ts`](./lib/admin/schema.ts) — add a field there, add it to the JSON and type, and the form updates automatically.
-
-### Admin
-
-Sign in at `/admin/login`.
-
-- Locally, if `ADMIN_PASSWORD` is unset, the fallback password is `admin`.
-- Sessions last eight hours and are stored in an HMAC-signed, http-only cookie.
-- Saving writes pretty-printed JSON and revalidates the site.
-
-Storage is chosen at runtime:
-
-- **Local files** (default): writes to `content/` on disk. Good for development and self-hosted servers with persistent storage.
-- **GitHub** (when `GITHUB_TOKEN` and `GITHUB_REPO` are set): commits through the GitHub Contents API using the same file, then Vercel rebuilds. This is the recommended production setup.
+Locally, CMS saves write to the JSON files in `content/`. In production on Vercel, configure GitHub storage so saves become commits and trigger a deployment.
 
 ## Environment variables
 
-| Variable               | Required | Purpose                                                       |
-| ---------------------- | -------- | ------------------------------------------------------------- |
-| `NEXT_PUBLIC_SITE_URL` | No       | Canonical URL, sitemap, robots, OG metadata                   |
-| `ADMIN_PASSWORD`       | Yes (prod) | Admin sign-in password                                      |
-| `ADMIN_SECRET`         | No       | Dedicated cookie-signing secret (defaults to one derived from the password) |
-| `GITHUB_TOKEN`         | No       | Fine-grained token with **Contents: read and write**          |
-| `GITHUB_REPO`          | No       | Repository for content commits, as `owner/repo`               |
-| `GITHUB_BRANCH`        | No       | Branch to commit to (default `main`)                          |
+Copy [`.env.example`](./.env.example) to `.env.local` and set:
 
-See [`.env.example`](./.env.example).
+| Variable | Required | Purpose |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Recommended | Canonical URL, sitemap, robots, and metadata |
+| `ADMIN_PASSWORD` | Required in production | CMS sign-in password |
+| `ADMIN_SECRET` | Recommended | Secret used to sign admin sessions |
+| `GITHUB_TOKEN` | Required for Vercel CMS saves | Fine-grained token with repository Contents read/write access |
+| `GITHUB_REPO` | Required for Vercel CMS saves | Repository in `owner/repository` format |
+| `GITHUB_BRANCH` | Optional | Branch for CMS commits; defaults to `main` |
 
-## Deploying to Vercel
+Never commit `.env.local` or any password, token, or secret.
 
-1. Push the repository to GitHub and import it in Vercel.
-2. Set `NEXT_PUBLIC_SITE_URL` and a strong `ADMIN_PASSWORD` in Project Settings → Environment Variables.
-3. Create a fine-grained GitHub token scoped to the repo with **Contents: read and write**, then add `GITHUB_TOKEN` and `GITHUB_REPO`.
-4. Deploy. Admin saves commit to `content/` and trigger a rebuild; the live site picks up changes after the build.
+## Deploy with Vercel
 
-Without the GitHub variables the admin still works on a persistent Node host, but Vercel's filesystem is ephemeral — use GitHub storage there.
+1. Push this repository to GitHub.
+2. Import `R-A-Co/website` into [Vercel](https://vercel.com).
+3. Add the environment variables above in **Project Settings → Environment Variables**.
+4. Set `GITHUB_REPO` to `R-A-Co/website`.
+5. Create a GitHub fine-grained token with **Contents: read and write** access for this repository and set it as `GITHUB_TOKEN`.
+6. Deploy the `main` branch.
+7. Open `/admin` on the deployed domain and test a CMS edit.
 
-## Design notes
+The GitHub repository can remain private while the deployed website is public.
 
-- Light canvas (`#f7f6f5`), near-black ink (`#191919`), 7% hairlines, and a single electric-blue accent (`#2200ff`).
-- Running text is serif (Newsreader); headings and labels are sans/mono, mirroring Cognition's type pairing.
-- Desktop uses a sticky left rail; below `lg` it becomes a compact top bar with a full-screen, focus-trapped menu.
-- Numbered sections (`01`–`06`) share a 12-column editorial grid with a narrow number column. Content is intentionally narrow for readable line lengths.
-- No leaderboards, rankings, or gamified tables. Metrics are inline technical metadata on project panels.
-- Custom SVG forecast figure and generated OG image — no raster assets.
-- Scroll-driven section reveals use `animation-timeline: view()` as progressive enhancement and respect `prefers-reduced-motion`.
+## Project structure
 
-## Accessibility
+```text
+app/
+  (site)/             Public pages and layout
+  admin/              CMS dashboard, login, and collection editor
+  globals.css         Global design and responsive styles
+components/           Shared site, page, and CMS components
+content/              Editable JSON content
+lib/
+  content.ts          Server-side content readers
+  content-types.ts    Shared TypeScript types
+  admin/              CMS schema, authentication, storage, and actions
+```
 
-- Semantic landmarks, ordered heading hierarchy, and a skip link to `#main`.
-- Mobile navigation is a focus-trapped dialog: Escape closes, body scroll locks, focus returns to the trigger.
-- Visible 2px focus outlines on all interactive elements.
-- Axe run against WCAG 2.0/2.1/2.2 A and AA: **0 violations**.
-- Secondary text clears AA at ~5.8:1 on the light canvas; the accent clears AA at ~7.8:1.
-- Layout verified from 320px through 1920px with no horizontal overflow.
+## Accessibility and responsive design
 
-## Placeholders
+- Semantic landmarks and ordered headings
+- Skip link and visible keyboard focus states
+- Mobile navigation with focus management
+- Responsive layout tested from narrow mobile screens through desktop
+- Reduced-motion support for animated elements
+- Horizontal overflow protection
 
-Replace before publishing:
+## License
 
-- GitHub organization and repository URLs (`dsc-research`)
-- Committee email and individual emails
-- Institutional / student-activities / newsletter links in `components/site-footer.tsx`
-- Publication references, metrics, dates, and member names in `content/`
-- `NEXT_PUBLIC_SITE_URL`
+See [`LICENSE`](./LICENSE).
