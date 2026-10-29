@@ -19,6 +19,23 @@ export const actionLink =
 export const microLabel =
   "font-mono text-[10px] uppercase leading-[1.5] tracking-[0.14em] text-secondary";
 
+const defaultSiteUrl = "https://research.datascienceclub.org";
+
+export function getSiteUrl(): string {
+  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (!configuredUrl) return defaultSiteUrl;
+
+  const withScheme = /^[a-z][a-z\d+\-.]*:\/\//i.test(configuredUrl)
+    ? configuredUrl
+    : `https://${configuredUrl}`;
+
+  try {
+    return new URL(withScheme).toString().replace(/\/$/, "");
+  } catch {
+    return defaultSiteUrl;
+  }
+}
+
 const monthDay = new Intl.DateTimeFormat("en-US", {
   month: "short",
   day: "2-digit",

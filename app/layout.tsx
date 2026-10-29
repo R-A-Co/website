@@ -3,10 +3,10 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "@fontsource-variable/newsreader";
 import { getSite } from "@/lib/content";
+import { getSiteUrl } from "@/lib/utils";
 import "./globals.css";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://research.datascienceclub.org";
+const siteUrl = getSiteUrl();
 
 const site = getSite();
 
