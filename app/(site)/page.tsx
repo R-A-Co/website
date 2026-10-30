@@ -1,12 +1,11 @@
 import { Hero } from "@/components/hero";
 import { ArrowUpRight } from "lucide-react";
-import { getHome, getSite, getUpcomingSeminars } from "@/lib/content";
+import { getHome, getSite } from "@/lib/content";
 import { navLinks } from "@/lib/nav";
 
 export default function HomePage() {
   const site = getSite();
   const home = getHome();
-  const nextSeminar = getUpcomingSeminars()[0];
   const sectionDescriptions: Record<string, string> = {
     learning: "A guided path for learning coding and data topics.",
     research: "The questions and methods we are beginning to explore.",
@@ -18,7 +17,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Hero site={site} home={home} nextSeminar={nextSeminar} />
+      <Hero site={site} home={home} />
 
       <section className="pb-16 md:pb-24">
         <div className="grid grid-cols-12 gap-x-6">

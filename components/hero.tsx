@@ -1,27 +1,19 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import type { HomeContent, Seminar, Site } from "@/lib/content-types";
+import type { HomeContent, Site } from "@/lib/content-types";
 import {
   buttonPrimary,
   buttonSecondary,
   cn,
-  formatMonthDay,
   microLabel,
 } from "@/lib/utils";
 
 export function Hero({
   site,
   home,
-  nextSeminar,
 }: {
   site: Site;
   home: HomeContent;
-  nextSeminar?: Seminar;
 }) {
-  const nextSeminarTime = nextSeminar?.time.split(" – ")[0];
-  const nextSeminarRoom = nextSeminar
-    ? (nextSeminar.location.split(" · ").at(-1) ?? nextSeminar.location)
-    : null;
-
   return (
     <section
       id="top"
@@ -89,33 +81,6 @@ export function Hero({
             ))}
           </dl>
 
-          {nextSeminar && nextSeminarTime && nextSeminarRoom ? (
-            <a
-              href="/seminars"
-              className="group mt-6 flex max-w-[560px] items-start justify-between gap-6 border-t border-border pt-4"
-            >
-              <span>
-                <span className={cn(microLabel, "flex items-center gap-2")}>
-                  <span
-                    aria-hidden="true"
-                    className="size-1 rounded-full bg-accent"
-                  />
-                  Next seminar
-                </span>
-                <span className="mt-1.5 block font-sans text-[15px] leading-[1.3] text-ink transition-colors group-hover:text-accent">
-                  {nextSeminar.title}
-                </span>
-                <span className="mt-1 block font-mono text-[10px] uppercase leading-[1.5] tracking-[0.08em] text-secondary">
-                  {formatMonthDay(nextSeminar.date)} · {nextSeminarTime} ·{" "}
-                  {nextSeminarRoom}
-                </span>
-              </span>
-              <ArrowUpRight
-                aria-hidden="true"
-                className="mt-0.5 size-3.5 shrink-0 text-accent transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-              />
-            </a>
-          ) : null}
         </div>
       </div>
 
