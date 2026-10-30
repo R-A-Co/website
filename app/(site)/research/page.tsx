@@ -6,7 +6,7 @@ import { getProjects } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "Flagship research projects from the Data Science Club Research & Analysis Committee — probabilistic forecasting, causal inference, and health-systems modelling.",
+    "Research questions, reading, and small projects from the Data Science Club Research & Analysis Committee.",
   alternates: { canonical: "/research" },
 };
 
@@ -16,14 +16,9 @@ export default function ResearchPage() {
   return (
     <PageShell
       index="02"
-      kicker="Flagship projects"
-      title="Selected work, built to ship."
-      description="Long-horizon questions, production-grade systems. Each project pairs a faculty advisor with a student research pod and a public, reproducible codebase."
-      action={{
-        label: "GitHub organization",
-        href: "https://github.com/dsc-research",
-        external: true,
-      }}
+      kicker="Research"
+      title="Questions worth exploring carefully."
+      description="We are learning how to turn a good question into a clear study. This page will grow as students read, discuss methods, and begin small projects together."
     >
       <ProjectsView projects={projects} />
     </PageShell>

@@ -30,11 +30,17 @@ export function Hero({
       <div className="hero-visual" aria-hidden="true">
         <span className="hero-visual__ring hero-visual__ring--outer" />
         <span className="hero-visual__ring hero-visual__ring--inner" />
+        <span className="hero-visual__ring hero-visual__ring--orbit" />
+        <span className="hero-visual__frame" />
         <span className="hero-visual__axis hero-visual__axis--horizontal" />
         <span className="hero-visual__axis hero-visual__axis--vertical" />
+        <span className="hero-visual__tick hero-visual__tick--top" />
+        <span className="hero-visual__tick hero-visual__tick--right" />
+        <span className="hero-visual__tick hero-visual__tick--bottom" />
+        <span className="hero-visual__tick hero-visual__tick--left" />
         <span className="hero-visual__dot hero-visual__dot--one" />
         <span className="hero-visual__dot hero-visual__dot--two" />
-        <span className="hero-visual__label">R&amp;A / 01</span>
+        <span className="hero-visual__label">R&amp;A</span>
       </div>
       <div className="grid grid-cols-12 gap-x-6">
         <p

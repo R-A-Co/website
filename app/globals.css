@@ -62,7 +62,9 @@ body {
 
 .hero-visual__ring,
 .hero-visual__axis,
-.hero-visual__dot {
+.hero-visual__dot,
+.hero-visual__frame,
+.hero-visual__tick {
   position: absolute;
   display: block;
 }
@@ -86,6 +88,23 @@ body {
   border-color: rgb(25 25 25 / 0.16);
 }
 
+.hero-visual__ring--orbit {
+  width: 13.5rem;
+  height: 6rem;
+  border-color: rgb(34 0 255 / 0.14);
+  border-style: dashed;
+  transform: translate(-50%, -50%) rotate(-24deg);
+}
+
+.hero-visual__frame {
+  top: 1.75rem;
+  right: 1.75rem;
+  bottom: 1.75rem;
+  left: 1.75rem;
+  border: 1px solid rgb(25 25 25 / 0.1);
+  transform: rotate(12deg);
+}
+
 .hero-visual__axis {
   background: rgb(25 25 25 / 0.12);
 }
@@ -102,6 +121,41 @@ body {
   bottom: 0;
   left: 50%;
   width: 1px;
+}
+
+.hero-visual__tick {
+  background: var(--color-accent);
+  opacity: 0.5;
+}
+
+.hero-visual__tick--top,
+.hero-visual__tick--bottom {
+  left: calc(50% - 0.5rem);
+  width: 1rem;
+  height: 1px;
+}
+
+.hero-visual__tick--top {
+  top: 0;
+}
+
+.hero-visual__tick--bottom {
+  bottom: 0;
+}
+
+.hero-visual__tick--right,
+.hero-visual__tick--left {
+  top: calc(50% - 0.5rem);
+  width: 1px;
+  height: 1rem;
+}
+
+.hero-visual__tick--right {
+  right: 0;
+}
+
+.hero-visual__tick--left {
+  left: 0;
 }
 
 .hero-visual__dot {
@@ -137,6 +191,352 @@ body {
   color: var(--color-secondary);
 }
 
+.page-visual {
+  position: absolute;
+  top: 4.5rem;
+  right: 0;
+  width: 13rem;
+  height: 10rem;
+  opacity: 0.62;
+  pointer-events: none;
+}
+
+.page-visual__line,
+.page-visual__shape,
+.page-visual__marker,
+.page-visual__grid,
+.page-visual__bracket,
+.page-visual__wave,
+.page-visual__bar {
+  position: absolute;
+  display: block;
+}
+
+.page-visual__line {
+  background: rgb(25 25 25 / 0.14);
+}
+
+.page-visual__line--one {
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 1px;
+}
+
+.page-visual__line--two {
+  top: 0;
+  bottom: 0;
+  left: 38%;
+  width: 1px;
+}
+
+.page-visual__shape {
+  border: 1px solid rgb(34 0 255 / 0.28);
+}
+
+.page-visual__shape--one {
+  top: 1.25rem;
+  left: 1.5rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+}
+
+.page-visual__shape--two {
+  top: 2.5rem;
+  left: 3rem;
+  width: 7rem;
+  height: 4rem;
+  border-color: rgb(25 25 25 / 0.18);
+  transform: rotate(-24deg);
+}
+
+.page-visual__grid {
+  top: 0.75rem;
+  right: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-image: radial-gradient(
+    circle,
+    rgb(34 0 255 / 0.4) 1px,
+    transparent 1.5px
+  );
+  background-size: 0.6rem 0.6rem;
+}
+
+.page-visual__bracket {
+  top: 3.75rem;
+  width: 1.5rem;
+  height: 2.5rem;
+  border-top: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-accent);
+  opacity: 0.55;
+}
+
+.page-visual__bracket--left {
+  left: 0;
+  border-left: 1px solid var(--color-accent);
+}
+
+.page-visual__bracket--right {
+  right: 0;
+  border-right: 1px solid var(--color-accent);
+}
+
+.page-visual__wave {
+  top: 7.1rem;
+  left: 1rem;
+  width: 7rem;
+  height: 0.75rem;
+  border-top: 1px solid rgb(25 25 25 / 0.32);
+  border-radius: 50%;
+  transform: skewX(-35deg) rotate(-8deg);
+}
+
+.page-visual__bar {
+  bottom: 1.25rem;
+  width: 1px;
+  background: var(--color-accent);
+  opacity: 0.55;
+}
+
+.page-visual__bar--one {
+  right: 4.5rem;
+  height: 1.25rem;
+}
+
+.page-visual__bar--two {
+  right: 4rem;
+  height: 2rem;
+}
+
+.page-visual__bar--three {
+  right: 3.5rem;
+  height: 0.8rem;
+}
+
+.page-visual--02 .page-visual__grid,
+.page-visual--03 .page-visual__bracket,
+.page-visual--05 .page-visual__wave,
+.page-visual--07 .page-visual__bar {
+  display: none;
+}
+
+.page-visual--02 .page-visual__wave {
+  transform: skewX(-35deg) rotate(8deg);
+}
+
+.page-visual--03 .page-visual__grid {
+  top: 1rem;
+  right: 1rem;
+}
+
+.page-visual--04 .page-visual__bracket {
+  transform: rotate(12deg);
+}
+
+.page-visual--06 .page-visual__wave {
+  left: 4rem;
+  width: 5rem;
+}
+
+.page-visual--07 .page-visual__grid {
+  top: 0;
+  right: 1.5rem;
+}
+
+.page-visual__marker {
+  width: 0.35rem;
+  height: 0.35rem;
+  background: var(--color-accent);
+}
+
+.page-visual__marker--one {
+  top: 1rem;
+  left: 38%;
+}
+
+.page-visual__marker--two {
+  right: 1rem;
+  bottom: 1.25rem;
+  background: var(--color-ink);
+}
+
+.page-visual__label {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-family: var(--font-geist-mono);
+  font-size: 0.5625rem;
+  line-height: 1.5;
+  letter-spacing: 0.12em;
+  color: var(--color-secondary);
+}
+
+.page-visual--03 .page-visual__shape--one {
+  border-radius: 0;
+  transform: rotate(45deg);
+}
+
+.page-visual--03 .page-visual__shape--two {
+  width: 5rem;
+  height: 5rem;
+  border-style: dashed;
+  transform: rotate(0);
+}
+
+.page-visual--04 .page-visual__shape--one {
+  width: 8rem;
+  height: 3rem;
+  border-radius: 0;
+  transform: skewY(-18deg);
+}
+
+.page-visual--04 .page-visual__shape--two {
+  top: 1.5rem;
+  left: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.page-visual--05 .page-visual__shape--one,
+.page-visual--06 .page-visual__shape--one {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 0;
+  transform: rotate(45deg);
+}
+
+.page-visual--05 .page-visual__shape--two {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.page-visual--06 .page-visual__shape--two {
+  top: 1.25rem;
+  left: 5.25rem;
+  width: 5rem;
+  height: 5rem;
+  border-style: dashed;
+  transform: rotate(30deg);
+}
+
+.page-visual--07 .page-visual__shape--one {
+  border-radius: 50%;
+  box-shadow: 1.5rem 1.5rem 0 -0.5rem var(--color-background),
+    1.5rem 1.5rem 0 -0.4rem rgb(34 0 255 / 0.28);
+}
+
+.page-visual--07 .page-visual__shape--two {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border-style: dashed;
+}
+
+.page-content__ornament {
+  position: absolute;
+  top: 0.25rem;
+  right: -2.25rem;
+  width: 1.25rem;
+  height: 7rem;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.page-content__ornament-line,
+.page-content__ornament-corner,
+.page-content__ornament-dots {
+  position: absolute;
+  display: block;
+}
+
+.page-content__ornament-line {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(34 0 255 / 0.55) 20%,
+    rgb(34 0 255 / 0.55) 80%,
+    transparent
+  );
+}
+
+.page-content__ornament-corner {
+  top: 1rem;
+  left: -0.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-top: 1px solid rgb(25 25 25 / 0.24);
+  border-right: 1px solid rgb(25 25 25 / 0.24);
+}
+
+.page-content__ornament-dots {
+  top: 3.75rem;
+  left: -0.2rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-image: radial-gradient(
+    circle,
+    var(--color-accent) 1px,
+    transparent 1.5px
+  );
+  background-size: 0.35rem 0.35rem;
+}
+
+.page-transition {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 8rem;
+  margin-top: 3.5rem;
+  border-top: 1px solid rgb(25 25 25 / 0.2);
+}
+
+.page-transition__line {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  left: 8%;
+  height: 1px;
+  background: rgb(25 25 25 / 0.22);
+}
+
+.page-transition__shape {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--color-background);
+}
+
+.page-transition__shape--circle {
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+}
+
+.page-transition__shape--square {
+  border: 2px solid rgb(25 25 25 / 0.65);
+  transform: rotate(45deg);
+}
+
+.page-transition__shape--triangle {
+  width: 0;
+  height: 0;
+  border-right: 0.9rem solid transparent;
+  border-bottom: 1.55rem solid var(--color-accent);
+  border-left: 0.9rem solid transparent;
+  background: transparent;
+}
+
 @media (max-width: 1023px) {
   .hero-visual {
     top: 5.5rem;
@@ -154,6 +554,41 @@ body {
   .hero-visual__ring--inner {
     width: 4rem;
     height: 4rem;
+  }
+
+  .page-visual {
+    top: 3.5rem;
+    right: -2.5rem;
+    width: 10rem;
+    height: 8rem;
+    opacity: 0.42;
+  }
+
+  .page-visual__shape--one {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .page-visual__shape--two {
+    width: 5rem;
+    height: 3rem;
+  }
+
+  .page-content__ornament {
+    right: -1rem;
+    opacity: 0.4;
+  }
+
+  .hero-visual__ring--orbit {
+    width: 10rem;
+    height: 4.5rem;
+  }
+
+  .hero-visual__frame {
+    top: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: 1.25rem;
   }
 
   .site-frame::before {

@@ -17,9 +17,27 @@ export function PageShell({
   action?: { label: string; href: string; external?: boolean };
   children: ReactNode;
 }) {
+  const visualVariant = `page-visual--${index}`;
+
   return (
     <>
-      <header className="pb-10 pt-6 md:pt-16 lg:pt-28">
+      <header className="relative overflow-hidden pb-10 pt-6 md:pt-16 lg:pt-28">
+        <div className={cn("page-visual", visualVariant)} aria-hidden="true">
+          <span className="page-visual__line page-visual__line--one" />
+          <span className="page-visual__line page-visual__line--two" />
+          <span className="page-visual__shape page-visual__shape--one" />
+          <span className="page-visual__shape page-visual__shape--two" />
+          <span className="page-visual__grid" />
+          <span className="page-visual__bracket page-visual__bracket--left" />
+          <span className="page-visual__bracket page-visual__bracket--right" />
+          <span className="page-visual__wave" />
+          <span className="page-visual__bar page-visual__bar--one" />
+          <span className="page-visual__bar page-visual__bar--two" />
+          <span className="page-visual__bar page-visual__bar--three" />
+          <span className="page-visual__marker page-visual__marker--one" />
+          <span className="page-visual__marker page-visual__marker--two" />
+          <span className="page-visual__label">FIELD NOTE</span>
+        </div>
         <div className="grid grid-cols-12 gap-x-6">
           <div aria-hidden="true" className="hidden md:col-span-1 md:block" />
 
@@ -51,8 +69,19 @@ export function PageShell({
       </header>
 
       <div className="grid grid-cols-12 gap-x-6">
-        <div className="col-span-12 min-w-0 md:col-start-2 md:col-span-10">
+        <div className="page-content relative col-span-12 min-w-0 md:col-start-2 md:col-span-10">
+          <div className="page-content__ornament" aria-hidden="true">
+            <span className="page-content__ornament-line" />
+            <span className="page-content__ornament-corner" />
+            <span className="page-content__ornament-dots" />
+          </div>
           {children}
+          <div className="page-transition" aria-hidden="true">
+            <span className="page-transition__line" />
+            <span className="page-transition__shape page-transition__shape--circle" />
+            <span className="page-transition__shape page-transition__shape--square" />
+            <span className="page-transition__shape page-transition__shape--triangle" />
+          </div>
         </div>
       </div>
     </>

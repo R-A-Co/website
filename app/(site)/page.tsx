@@ -1,11 +1,12 @@
 import { Hero } from "@/components/hero";
 import { ArrowUpRight } from "lucide-react";
-import { getHome, getSite } from "@/lib/content";
+import { getHome, getSite, getUpcomingSeminars } from "@/lib/content";
 import { navLinks } from "@/lib/nav";
 
 export default function HomePage() {
   const site = getSite();
   const home = getHome();
+  const nextSeminar = getUpcomingSeminars()[0];
   const sectionDescriptions: Record<string, string> = {
     learning: "A guided path for learning coding and data topics.",
     research: "The questions and methods we are beginning to explore.",
@@ -17,7 +18,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Hero site={site} home={home} />
+      <Hero site={site} home={home} nextSeminar={nextSeminar} />
 
       <section className="pb-16 md:pb-24">
         <div className="grid grid-cols-12 gap-x-6">
@@ -35,7 +36,10 @@ export default function HomePage() {
               <div className="space-y-4 text-[16px] leading-[1.6]">
                 <p>
                   The Research &amp; Analysis Committee is part of the{" "}
-                  {home.aboutIntro}
+                  <a href="https://dscsms.com" className="link-inline">
+                    {site.name}
+                  </a>
+                  . {home.aboutIntro}
                 </p>
                 <p className="text-secondary">
                   {home.aboutSecondary}
@@ -172,6 +176,12 @@ export default function HomePage() {
         <a href={site.linkedin} target="_blank" rel="noreferrer" className="text-[13px] text-accent">
           LinkedIn <ArrowUpRight aria-hidden="true" className="inline size-3" />
         </a>
+      </div>
+      <div className="page-transition" aria-hidden="true">
+        <span className="page-transition__line" />
+        <span className="page-transition__shape page-transition__shape--circle" />
+        <span className="page-transition__shape page-transition__shape--square" />
+        <span className="page-transition__shape page-transition__shape--triangle" />
       </div>
     </>
   );

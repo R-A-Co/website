@@ -11,7 +11,7 @@ import {
 export const metadata: Metadata = {
   title: "Tools",
   description:
-    "Open-source packages, curated datasets, and analytical scripts from the Data Science Club Research & Analysis Committee.",
+    "Tools and references for learning coding, data analysis, and research.",
   alternates: { canonical: "/tools" },
 };
 
@@ -21,14 +21,9 @@ export default function ToolsPage() {
   return (
     <PageShell
       index="03"
-      kicker="Open source"
-      title="Tools and data, in the open."
-      description="Small, sharp utilities extracted from our own research. Typed, tested, and maintained by committee members — with the datasets that make the work reproducible."
-      action={{
-        label: "Browse the GitHub organization",
-        href: site.github,
-        external: true,
-      }}
+      kicker="Tools & references"
+      title="A practical place to begin."
+      description="We are collecting the software, datasets, and small examples that help students practice research and data work. More will be added as the learning program develops."
     >
       <ToolsView
         tools={getTools()}
